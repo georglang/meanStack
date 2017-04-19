@@ -65,7 +65,7 @@ Create new message | POST | /messages |  | localhost:3000/api/messages |
 Read list of messages| GET | /messages | | localhost:3000/api/messages |
 Read a specific message | GET | /messages | message_id | localhost:3000/api/messages/123 |
 Update a specific message | PUT | /messages | message_id | localhost:3000/api/messages/123 |
-Delete a specific message | DELETE | /messages | :message_id | localhost:3000/api/messages/123 |
+Delete a specific message | DELETE | /messages | message_id | localhost:3000/api/messages/123 |
 
 ### License
 MIT
