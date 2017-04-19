@@ -1,9 +1,8 @@
 # MEAN Stack - Boilerplate
-
 ---
-##This project is a boilerplate of the "MEAN Stack"
 
-----
+## This project is a boilerplate of the "MEAN Stack"
+
 #### This Boilerplate includes 
 * [**M**ongoDB](https://www.mongodb.com) / ([Mongoose](http://www.mongoosejs.com ))
 * [**E**xpress.js](http://expressjs.com)
@@ -21,14 +20,12 @@
 
 A window will automatically open at [localhost:4200](http://localhost:4200). Angular and Express files are being watched. Any change automatically creates a new bundle, restart Express server and reload your browser.
 
-`npm build`: [concurrently]()
 
-
-###Dependencies
+### Dependencies
 * [nodemon](https://nodemon.io/): monitors source changes  and automatically restart the server
 * [concurrently](https://github.com/kimmobrunfeldt/concurrently): Run multiple commands concurrently
 
-----
+
 ## Client - Angular 4
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
