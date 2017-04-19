@@ -1,5 +1,5 @@
 const mongoDBConfig = {
-  url : 'mongodb://localhost:27017/georg'
+  mongoDbUrl : 'mongodb://localhost:27017/developmentDB'
 };
 
 export default mongoDBConfig;
