@@ -1,9 +1,8 @@
 # MEAN Stack - Boilerplate
 
 
-## This project is a boilerplate of the "MEAN Stack"
-
-#### This Boilerplate includes 
+### This project is a boilerplate of the "MEAN Stack"
+ 
 * [**M**ongoDB](https://www.mongodb.com) / ([Mongoose](http://www.mongoosejs.com ))
 * [**E**xpress.js](http://expressjs.com)
 * [**A**ngular 4](https://angular.io)
@@ -27,7 +26,7 @@ A window will automatically open at [localhost:4200](http://localhost:4200). Ang
 
 
 
-## Client - Angular-CLI
+# Client - Angular-CLI
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ### Development server
@@ -54,7 +53,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 
 
-## Server - Express.js
+# Server - Express.js
 
 Server is listening on port localhost:3000
 
