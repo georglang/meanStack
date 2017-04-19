@@ -5,10 +5,6 @@ import * as mongoose from 'mongoose';
 import * as path from 'path';
 
 import config from './config/db';
-import Cat from './models/cat.model';
-
-import Message from './models/message.model';
-
 import setRoutes from './routes/routes';
 
 const app = express();
