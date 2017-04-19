@@ -9,7 +9,7 @@ import Cat from './models/cat.model';
 
 import Message from './models/message.model';
 
-import setRoutes from './routes';
+import setRoutes from './routes/routes';
 
 const app = express();
 app.set('port', (process.env.PORT || 3000));
