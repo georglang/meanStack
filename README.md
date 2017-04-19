@@ -1,5 +1,5 @@
 # MEAN Stack - Boilerplate
----
+
 
 ## This project is a boilerplate of the "MEAN Stack"
 
@@ -26,7 +26,8 @@ A window will automatically open at [localhost:4200](http://localhost:4200). Ang
 * [concurrently](https://github.com/kimmobrunfeldt/concurrently): Run multiple commands concurrently
 
 
-## Client - Angular 4
+
+## Client - Angular-CLI
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ### Development server
@@ -50,7 +51,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
----
+
 
 
 ## Server - Express.js
