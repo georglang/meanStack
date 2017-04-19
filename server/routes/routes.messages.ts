@@ -22,19 +22,19 @@ MessageRouter.route('/')
 
 MessageRouter.route('/:message_id')
   .get((req, res) => {
-    Message.findById(req.params.message_id, (err, doc) => {
+    Message.findById(req.params.message_id, (err, result) => {
       if (err) {
         res.send(err);
       }
-      res.json(doc);
+      res.json(result);
     });
   })
   .put((req, res) => {
-    Message.findById(req.params.message_id, (err, message) => {
+    Message.findById(req.params.message_id, (err, result) => {
       if (err) {
         res.send(err);
       }
-      message.update(req.body, (saveError) => {
+      result.update(req.body, (saveError) => {
         if (saveError) {
           res.send(saveError);
         }
