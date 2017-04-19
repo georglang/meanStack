@@ -2,7 +2,7 @@
 /node_modules
 
 # compiled output
-/client/dist
+dist
 
 # IDE
 .idea
