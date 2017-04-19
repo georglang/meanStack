@@ -3,61 +3,51 @@ import Message from '../models/message.model';
 const MessageRouter = express.Router();
 
 MessageRouter.route('/')
-  .get(function (req, res) {
-    Message.find({}, (err, entires) => {
+  .get((req, res) => {
+    Message.find({}, (err, doc) => {
       if (err) {
         res.send(err);
       }
-      res.json(entires);
+      res.json(doc);
     });
   })
   .post(function (req, res) {
-    const message = new Message();
-    message.title = req.body.title;
-    message.content = req.body.content;
-    message.save(function (err) {
+    Message.create(req.body, (err) => {
       if (err) {
         res.send(err);
       }
-      res.json({message: 'diaryEntry created'});
+      res.json({message: 'created'});
     });
   });
 
-MessageRouter.route('/:entry_id')
-  .get(function (req, res) {
-    Message.findById(req.params.entry_id, function (err, entry) {
+MessageRouter.route('/:message_id')
+  .get((req, res) => {
+    Message.findById(req.params.message_id, (err, doc) => {
       if (err) {
         res.send(err);
       }
-      res.json(entry);
+      res.json(doc);
     });
   })
-  .put(function(req, res) {
-    Message.findById(req.params.entry_id, function(err, entry) {
+  .put((req, res) => {
+    Message.findById(req.params.message_id, (err, message) => {
       if (err) {
         res.send(err);
       }
-      console.log('Request.Body.Title', req.body.title);
-      entry.title = req.body.title;  // update the name
-      entry.content = req.body.content;
-
-      // save the entry
-      entry.save(function(err) {
-        if (err) {
-          res.send(err);
+      message.update(req.body, (saveError) => {
+        if (saveError) {
+          res.send(saveError);
         }
-        res.json({ message: 'Message updated!' });
+        res.json({ message: 'updated!' });
       });
     });
   })
   .delete(function (req, res) {
-    Message.remove({
-      _id: req.params.entry_id
-    }, function (err, entry) {
+    Message.remove({ _id: req.params.message_id }, (err) => {
       if (err) {
         res.send(err);
       }
-      res.json({message: 'Successfully deleted'});
+      res.json({message: 'deleted'});
     });
   });
 
