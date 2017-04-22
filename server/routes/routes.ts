@@ -1,4 +1,3 @@
-import * as path from 'path';
 import MessageRouter from './routes.messages';
 
 export default function setRoutes(app) {
