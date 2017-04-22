@@ -9,6 +9,7 @@ MessageRouter.route('/')
         res.send(err);
       }
       res.json(doc);
+      res.status(200);
     });
   })
   .post(function (req, res) {
@@ -17,6 +18,7 @@ MessageRouter.route('/')
         res.send(err);
       }
       res.json({message: 'created'});
+      res.status(201);
     });
   });
 
@@ -27,6 +29,7 @@ MessageRouter.route('/:message_id')
         res.send(err);
       }
       res.json(result);
+      res.status(200);
     });
   })
   .put((req, res) => {
@@ -39,6 +42,7 @@ MessageRouter.route('/:message_id')
           res.send(saveError);
         }
         res.json({ message: 'updated!' });
+        res.status(200);
       });
     });
   })
@@ -48,6 +52,7 @@ MessageRouter.route('/:message_id')
         res.send(err);
       }
       res.json({message: 'deleted'});
+      res.status(204);
     });
   });
 
