@@ -22,8 +22,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-
-
 mongoose.connect(dbConfig.mongoDbUrl);
 const db = mongoose.connection;
 (<any>mongoose).Promise = global.Promise;
@@ -34,12 +32,8 @@ db.once('open', () => {
 
   setRoutes(app);
 
-  app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
-  });
-
   app.listen(app.get('port'), () => {
-    console.log('Angular 2 Full Stack listening on port ' + app.get('port'));
+    console.log('Angular listening on port ' + app.get('port'));
   });
 });
 
